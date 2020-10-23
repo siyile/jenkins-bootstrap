@@ -1,50 +1,10 @@
-pipelineJob('pipelineJob') {
-    definition {
-        cps {
-            script(readFileFromWorkspace('pipelineJob.groovy'))
-            sandbox()
-        }
-    }
-}
-
-pipelineJob('key-value-job') {
+pipelineJob('facus-api-job-aws') {
     definition {
         cpsScm {
             scm {
                 git {
                     remote {
-                        url 'https://github.com/siyile/key-value.git'
-                    }
-                    branch 'master'
-                }
-            }
-        }
-    }
-}
-
-pipelineJob('key-value-job-docker') {
-    definition {
-        cpsScm {
-            scm {
-                git {
-                    remote {
-                        url 'https://github.com/siyile/key-value.git'
-                    }
-                    branch 'master'
-                    scriptPath('Jenkinsfile-docker')
-                }
-            }
-        }
-    }
-}
-
-pipelineJob('key-value-job-aws') {
-    definition {
-        cpsScm {
-            scm {
-                git {
-                    remote {
-                        url 'https://github.com/siyile/key-value.git'
+                        url 'https://github.com/siyile/facus-api.git'
                     }
                     branch 'master'
                     scriptPath('Jenkinsfile-aws')
