@@ -37,3 +37,19 @@ pipelineJob('key-value-job-docker') {
         }
     }
 }
+
+pipelineJob('key-value-job-aws') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/siyile/key-value.git'
+                    }
+                    branch 'master'
+                    scriptPath('Jenkinsfile-aws')
+                }
+            }
+        }
+    }
+}

@@ -4,3 +4,5 @@ workflow-aggregator:2.6
 git:4.2.2
 docker-plugin:1.2.1
 docker-workflow:1.24
+aws-credentials:1.28
+pipeline-aws:1.41
